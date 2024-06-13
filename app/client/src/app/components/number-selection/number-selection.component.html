@@ -1,0 +1,19 @@
+<div id="main-container" class="container">
+  <button class="outline" (click)="toggleForm()">Configure {{ label }}</button>
+  <form id="config-form" [ngClass]="{
+    'hide': !displayForm,
+    }">
+    <div>
+      <label for="lower-threshold">Min: {{ lowerThresholdControl.value }}</label>
+      <input id="lower-threshold" type="range" [formControl]="lowerThresholdControl" max="100" min="0" />
+    </div>
+    <div>
+      <label for="upper-threshold">Max: {{ upperThresholdControl.value }}</label>
+      <input id="upper-threshold" type="range" [formControl]="upperThresholdControl" max="100" min="0" />
+    </div>
+    <div>
+      <label for="preferred-value">Preferred: {{ preferredValueControl.value }}</label>
+      <input id="preferred-value" type="range" [formControl]="preferredValueControl" max="100" min="0" />
+    </div>
+  </form>
+</div>

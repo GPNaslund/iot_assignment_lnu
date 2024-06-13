@@ -1,0 +1,21 @@
+<div id="main-container" class="container">
+  <div>
+    <app-number-display [value]="temperature.value" [label]="temperature.label"
+      [thresholdMin]="temperature.thresholdMin" [thresholdMax]="temperature.thresholdMax"
+      [symbol]="temperature.symbol"></app-number-display>
+    <app-number-display [value]="humidity.value" [label]="humidity.label" [thresholdMin]="humidity.thresholdMin"
+      [thresholdMax]="humidity.thresholdMax" [symbol]="humidity.symbol"></app-number-display>
+  </div>
+  <div id="settings-container" class="grid">
+    <app-number-selection [label]="temperature.label" [upperThreshold]="temperature.thresholdMax"
+      [lowerThreshold]="temperature.thresholdMin" [preferredValue]="temperature.preferredValue"
+      (valueUpdate)="temperatureSettingsUpdate($event)"></app-number-selection>
+    <app-number-selection [label]="humidity.label" [upperThreshold]="humidity.thresholdMax"
+      [lowerThreshold]="humidity.thresholdMin" [preferredValue]="humidity.preferredValue"
+      (valueUpdate)="humiditySettingsUpdate($event)"></app-number-selection>
+    <app-recommendation-selection [humidityRecommendations]="humidityRecommendationStrings"
+      [temperatureRecommendations]="temperatureRecommendationStrings"
+      (humidityRecommendationSelected)="humidityRecommendationMade($event)"
+      (temperatureRecommendationSelected)="temperatureRecommendationMade($event)"></app-recommendation-selection>
+  </div>
+</div>

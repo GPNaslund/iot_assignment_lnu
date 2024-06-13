@@ -1,0 +1,39 @@
+@font-face {
+  font-family: 'DigitalFont';
+  src: url('/assets/fonts/DS-DIGII.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+#number-display {
+  user-select: none;
+}
+
+#value-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  font-family: 'DigitalFont';
+}
+
+#value-display {
+  font-size: 7rem;
+}
+
+#symbol-display {
+  font-size: 2rem;
+  padding-top: 20%;
+}
+
+#label-display {
+  margin-top: -30%;
+  padding-left: 5%;
+}
+
+.below-threshold {
+  color: #3DECEB;
+}
+
+.above-threshold {
+  color: #D93526;
+}

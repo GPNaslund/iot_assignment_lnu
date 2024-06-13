@@ -1,0 +1,13 @@
+<div id="number-display">
+  <div id="value-container">
+    <p id="value-display" [ngClass]="{
+      'below-threshold': isBelowThreshold(),
+      'above-threshold': isAboveThreshold(),
+    }">{{ value }}</p>
+    <p id="symbol-display" [ngClass]="{
+      'below-threshold': isBelowThreshold(),
+      'above-threshold': isAboveThreshold(),
+    }">{{ symbol }}</p>
+  </div>
+  <p id="label-display">{{ label }}</p>
+</div>

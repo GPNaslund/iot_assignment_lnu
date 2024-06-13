@@ -1,0 +1,21 @@
+<div id="main-container" class="container">
+  <button class="outline" (click)="toggleForm()">By recommendation</button>
+  <form id="config-form" [ngClass]="{
+    'hide': !displayForm,
+    }">
+    <select name="Temperature" aria-label="Select temperature recommendation" required
+      [formControl]="temperatureFormControl">
+      <option [defaultSelected]=true disabled value="">
+        Temperature
+      </option>
+      <option *ngFor="let recommendation of temperatureRecommendations">{{ recommendation }}</option>
+    </select>
+    <select name="Humidity" aria-label="Select humidity recommendation" required [formControl]="humidityFormControl">
+      <option [defaultSelected]=true disabled value="">
+        Humidity
+      </option>
+      <option *ngFor="let recommendation of humidityRecommendations">{{ recommendation }}</option>
+    </select>
+
+  </form>
+</div>

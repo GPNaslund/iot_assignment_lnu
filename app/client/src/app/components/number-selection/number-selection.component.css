@@ -1,0 +1,11 @@
+.hide {
+  display: none;
+}
+
+#main-container {
+  margin-top: 15%;
+}
+
+#config-form {
+  margin-top: 15%;
+}

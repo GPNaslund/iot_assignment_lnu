@@ -1,0 +1,4 @@
+<select name="TimePeriod" aria-label="Select" required [formControl]="optionsControl">
+    <option [defaultSelected]=true disabled value="">{{ label }}</option>
+    <option *ngFor="let option of options">{{ option }}</option>
+</select>

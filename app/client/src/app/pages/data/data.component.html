@@ -1,0 +1,14 @@
+<div id="container">
+    <div id="formContainer">
+        <app-dropdown-selection [options]="timePeriods" label="Select time period"
+            (optionSelected)="timePeriodValueChanged($event)"></app-dropdown-selection>
+        <app-date-selection *ngIf="timePeriodIsChoosen" label="Start date" [startDate]="dateRange.startDate"
+            [endDate]="dateRange.endDate" (dateSelected)="startDateSelected($event)"></app-date-selection>
+        <app-date-selection *ngIf="startDateIsChoosen" label="End date" [startDate]="selectedStartDate"
+            [endDate]="dateRange.endDate" (dateSelected)="endDateSelected($event)"></app-date-selection>
+        <button *ngIf="endDateIsChoosen" (click)="showDataClicked()">Show data</button>
+    </div>
+    <div id="chartContainer">
+        <app-sensor-chart *ngIf="data" [dataPoints]="data"></app-sensor-chart>
+    </div>
+</div>

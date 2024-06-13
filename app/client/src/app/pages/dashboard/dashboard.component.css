@@ -1,0 +1,10 @@
+#settings-container {
+  width: 70%;
+}
+
+#main-container {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+}
+

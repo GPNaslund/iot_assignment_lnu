@@ -1,0 +1,13 @@
+#formContainer {
+    width: 25%;
+}
+
+#chartContainer {
+    width: 75%;
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+}
